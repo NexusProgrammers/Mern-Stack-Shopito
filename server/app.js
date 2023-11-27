@@ -36,8 +36,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
     payment_method_types: ["card"],
     line_items: lineItems,
     mode: "payment",
-    success_url: "https://mern-stack-shopito-client.vercel.app/success/success",
-    cancel_url: "https://mern-stack-shopito-client.vercel.app/success/cancel",
+    success_url: "https://mern-stack-shopito-client.vercel.app/success",
+    cancel_url: "https://mern-stack-shopito-client.vercel.app/cancel",
   });
 
   res.json({ id: session.id });
