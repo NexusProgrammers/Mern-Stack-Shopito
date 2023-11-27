@@ -73,7 +73,7 @@ const CartDetails = () => {
       "Content-Type": "application/json",
     };
     const response = await fetch(
-      "http://localhost:8000/api/create-checkout-session",
+      "https://mern-stack-shopito-server.vercel.app/api/create-checkout-session",
       {
         method: "POST",
         headers: headers,
