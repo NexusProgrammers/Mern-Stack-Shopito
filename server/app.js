@@ -11,12 +11,11 @@ const stripe = stripePackage(process.env.STRIPE_SECRET_KEY);
 
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+app.use(cors());
+
+app.get("/", (req, res) => {
+  res.end("API Running");
+});
 
 app.post("/api/create-checkout-session", async (req, res) => {
   const { products } = req.body;
